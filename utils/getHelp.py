@@ -6,10 +6,10 @@ from constants.environments import environments as envs
 
 ns = Namespace().help
 
-# Name: getHelp
-# Desc: Format help message
-# Args: void
-# Return: string
+# Ім'я: getHelp
+# Опис: Форматування тексту довідки
+# Аргументи: void
+# Повертаєме значення: string
 
 def getHelp():
   actStyle = textStyles["Bold"] + textStyles["White"]

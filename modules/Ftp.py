@@ -3,27 +3,27 @@ from ftpretty import ftpretty as FTP
 from utils.getNextPath import getNextPath
 from utils.getTimestamp import getTimestamp
 
-# Name: Ftp
-# Desc: Provide additional features for ftp.
-#       Expand capabilities of inherited module
-# Inherits: ftpretty
-# Methods: 
-#   - exists (check if file exists)
-#   - isDir (check if file is a directory)
-#   - isFile (check if file is a file)
-#   - isBrokenSymlink (check if file is a broken symlink)
-#   - rmTree (delete file tree)
-#   - putFile (upload single file to the server)
-#   - getFile (download single file from the server)
-#   - putTree (upload file tree to the server)
-#   - getTree (download file tree from the server)
+# Ім'я: Ftp
+# Опис: Надає додаткові функції для FTP.
+#       Розширює функціонал успадкованого модулю
+# Успадковує: ftpretty
+# Методи: 
+#   - exists (перевірка чи файл існує)
+#   - isDir (перевірка на директорію)
+#   - isFile (перевірка на файл)
+#   - isBrokenSymlink (перевірка на невалідне символьне посилання)
+#   - rmTree (видаляє деверо файлів)
+#   - putFile (завантажує один файл на сервер)
+#   - getFile (завантажує один файл з серверу)
+#   - putTree (завантажує дерево файлів на серве)
+#   - getTree (завантажує дерево файлів з серверу)
 
 class Ftp(FTP):
 
-  # Name: exists
-  # Desc: Check if file exists
-  # Args: target (string), currentPath (string)
-  # Return: boolean
+  # Ім'я: exists
+  # Опис: Перевірка чи файл існує
+  # Аргументи: target (string), currentPath (string)
+  # Повертаєме значення: boolean
 
   def exists(self, target, currentPath):
     curDirList = self.list(currentPath, extra=True)
@@ -34,10 +34,10 @@ class Ftp(FTP):
     
   # ----------------------------------------------------
 
-  # Name: isDir
-  # Desc: Check if file is a directory
-  # Args: target (string)
-  # Return: boolean
+  # Ім'я: isDir
+  # Опис: Перевірка на директорію
+  # Аргументи: target (string)
+  # Повертаєме значення: boolean
 
   def isDir(self, target):
     path, targetName = os.path.split(target)
@@ -49,10 +49,10 @@ class Ftp(FTP):
 
   # ----------------------------------------------------
 
-  # Name: isFile
-  # Desc: Check if file is a file
-  # Args: target (string)
-  # Return: boolean
+  # Ім'я: isFile
+  # Опис: Перевірка на файл
+  # Аргументи: target (string)
+  # Повертаєме значення: boolean
 
   def isFile(self, target):
     path, targetName = os.path.split(target)
@@ -64,10 +64,10 @@ class Ftp(FTP):
 
   # ----------------------------------------------------
 
-  # Name: isBrokenSymlink
-  # Desc: Check if file is a broken symlink
-  # Args: path (string)
-  # Return: boolean
+  # Ім'я: isBrokenSymlink
+  # Опис: Перевірка на невалідне символьне посилання
+  # Аргументи: path (string)
+  # Повертаєме значення: boolean
 
   def isBrokenSymlink(self, path):
     if os.path.islink(path):
@@ -80,10 +80,10 @@ class Ftp(FTP):
 
   # ----------------------------------------------------
 
-  # Name: rmTree
-  # Desc: Delete file tree
-  # Args: path (string)
-  # Return: void
+  # Ім'я: rmTree
+  # Опис: Видалити дерево файлів
+  # Аргументи: path (string)
+  # Повертаєме значення: void
 
   def rmTree(self, path):
     pathList = self.list(path, extra=True)
@@ -97,12 +97,12 @@ class Ftp(FTP):
 
   # ----------------------------------------------------
 
-  # Name: putFile
-  # Desc: Upload single file to the server
-  # Args: targetPath (string),
+  # Ім'я: putFile
+  # Опис: Завантажити один файл на сервер
+  # Аргументи: targetPath (string),
   #       exists (boolean=False),
   #       overwrite (boolean=True)
-  # Return: void
+  # Повертаєме значення: void
 
   def putFile(self, targetPath, exists=False, overwrite=True):
     _, fileName = os.path.split(targetPath)
@@ -114,12 +114,12 @@ class Ftp(FTP):
 
   # ----------------------------------------------------
 
-  # Name: getFile
-  # Desc: Download single file from the server
-  # Args: targetPath (string),
+  # Ім'я: getFile
+  # Опис: Завантажити один файл з серверу
+  # Аргументи: targetPath (string),
   #       exists (boolean=False),
   #       overwrite (boolean=True)
-  # Return: void
+  # Повертаєме значення: void
 
   def getFile(self, targetPath, saveToPath, exists=False, overwrite=True):
     _, fileName = os.path.split(targetPath)
@@ -132,12 +132,12 @@ class Ftp(FTP):
 
   # ----------------------------------------------------
 
-  # Name: putTree
-  # Desc: Upload file tree to the server
-  # Args: targetPath (string),
+  # Ім'я: putTree
+  # Опис: Завантаження на сервер
+  # Аргументи: targetPath (string),
   #       exists (boolean=False),
   #       overwrite (boolean=True)
-  # Return: void
+  # Повертаєме значення: void
 
   def putTree(self, targetPath, exists=False, overwrite=True):
     _, dirName = os.path.split(targetPath)
@@ -167,12 +167,12 @@ class Ftp(FTP):
 
   # ----------------------------------------------------
 
-  # Name: getTree
-  # Desc: Download file tree from the server
-  # Args: targetPath (string),
+  # Ім'я: getTree
+  # Опис: Завантаження з серверу
+  # Аргументи: targetPath (string),
   #       exists (boolean=False),
   #       overwrite (boolean=True)
-  # Return: void
+  # Повертаєме значення: void
 
   def getTree(self, targetPath, exists=False, overwrite=True):
     _, dirName = os.path.split(targetPath)

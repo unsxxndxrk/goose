@@ -36,27 +36,27 @@ class App:
     self.pathRemote = ""
 
 
-  # # # # # # # # # # # #
-  #                     #
-  #        Utils        #
-  #                     #
-  # # # # # # # # # # # #
+  # # # # # # # # # # # # # # # # # #
+  #                                 #
+  #        Функції-помічники        #
+  #                                 # 
+  # # # # # # # # # # # # # # # # # #
 
 
-  # Name: processAction
-  # Desc: Process user input
-  # Args: action (string)
-  # Return: String with only single spaces
+  # Ім'я: processAction
+  # Опис: Первинна обробка введеної команди
+  # Аргументи: action (string)
+  # Повертаєме значення: Рядок з одиничним набором пробілів
 
   def processAction(self, action):
     return trimSpaces(action)
 
   # ----------------------------------------------------
 
-  # Name: pingServer
-  # Desc: Check connection status
-  # Args: message (boolean)
-  # Return: void
+  # Ім'я: pingServer
+  # Опис: Перевірка з'єднання з сервером
+  # Аргументи: message (boolean)
+  # Повертаєме значення: void
 
   def pingServer(self, message=True):
     try:
@@ -68,10 +68,10 @@ class App:
 
   # ----------------------------------------------------
 
-  # Name: setStatusDisconnected
-  # Desc: Set application status to disconnected state
-  # Args: void
-  # Return: void
+  # Ім'я: setStatusDisconnected
+  # Опис: Встановлення статусу "без з'єднання"
+  # Аргументи: void
+  # Повертаєме значення: void
 
   def setStatusDisconnected(self):
     self.ftp = None
@@ -81,10 +81,10 @@ class App:
 
   # ----------------------------------------------------
 
-  # Name: login
-  # Desc: Establish connection with remote ftp-server
-  # Args: void
-  # Return: boolean
+  # Ім'я: login
+  # Опис: Встановлення з'єднання з сервером
+  # Аргументи: void
+  # Повертаєме значення: boolean
 
   def login(self):
     loginData = self.loginData
@@ -106,10 +106,10 @@ class App:
 
   # ----------------------------------------------------
 
-  # Name: changeLocalPath
-  # Desc: Change local file system path 
-  # Args: nextPath (string)
-  # Return: void
+  # Ім'я: changeLocalPath
+  # Опис: Зміна шляху локальної файлової системи
+  # Аргументи: nextPath (string)
+  # Повертаєме значення: void
 
   def changeLocalPath(self, nextPath):
     os.chdir(nextPath)
@@ -117,10 +117,10 @@ class App:
 
   # ----------------------------------------------------
 
-  # Name: changeRemotePath
-  # Desc: Change remote file system path 
-  # Args: nextPath (string)
-  # Return: void
+  # Ім'я: changeRemotePath
+  # Опис: Зміна шляху віддаленої файлової системи
+  # Аргументи: nextPath (string)
+  # Повертаєме значення: void
 
   def changeRemotePath(self, nextPath):
     self.ftp.cwd(nextPath)
@@ -131,15 +131,15 @@ class App:
   
   # # # # # # # # # # # # #
   #                       #
-  #        Actions        #
+  #        Команди        #
   #                       #
   # # # # # # # # # # # # #
 
 
-  # Name: connect
-  # Desc: Connect to remote ftp-server
-  # Args: void
-  # Return: void
+  # Ім'я: connect
+  # Опис: З'єднання з FTP-сервером
+  # Аргументи: void
+  # Повертаєме значення: void
 
   def connect(self):
     hostStr = getSingleActionParam(act["Connect"], self.action)
@@ -171,10 +171,10 @@ class App:
 
   # ----------------------------------------------------
 
-  # Name: upload
-  # Desc: Upload data to remote ftp-server
-  # Args: void
-  # Return: void
+  # Ім'я: upload
+  # Опис: Завантаження даних на сервер
+  # Аргументи: void
+  # Повертаєме значення: void
 
   def upload(self):
     self.pingServer(message=False)
@@ -211,10 +211,10 @@ class App:
 
   # ----------------------------------------------------
 
-  # Name: download
-  # Desc: Download data from remote ftp-server
-  # Args: void
-  # Return: void
+  # Ім'я: download
+  # Опис: Завантаження даних з серверу
+  # Аргументи: void
+  # Повертаєме значення: void
 
   def download(self):
     self.pingServer(message=False)
@@ -251,10 +251,10 @@ class App:
 
   # ----------------------------------------------------
 
-  # Name: delete
-  # Desc: Delete local or remote file/directory
-  # Args: void
-  # Return: void
+  # Ім'я: delete
+  # Опис: Видалення файлів/директорій
+  # Аргументи: void
+  # Повертаєме значення: void
 
   def delete(self):
     target = getSingleActionParam(act["Delete"], self.action)
@@ -301,10 +301,10 @@ class App:
 
   # ----------------------------------------------------
 
-  # Name: mkdir
-  # Desc: Create new local or remote directory
-  # Args: void
-  # Return: void
+  # Ім'я: mkdir
+  # Опис: Створення директорій
+  # Аргументи: void
+  # Повертаєме значення: void
 
   def mkdir(self):
     dirName = getSingleActionParam(act["Mkdir"], self.action)
@@ -323,10 +323,10 @@ class App:
 
   # ----------------------------------------------------
 
-  # Name: changeEnv
-  # Desc: Change current working environment
-  # Args: void
-  # Return: void
+  # Ім'я: changeEnv
+  # Опис: Зміна поточного оточення
+  # Аргументи: void
+  # Повертаєме значення: void
 
   def changeEnv(self):
     changeTo = getSingleActionParam(act["ChangeEnv"], self.action)
@@ -339,10 +339,10 @@ class App:
       
   # ----------------------------------------------------
 
-  # Name: cd
-  # Desc: Change local/remote directory
-  # Args: void
-  # Return: void
+  # Ім'я: cd
+  # Опис: Зміна поточного шляху файлової системи
+  # Аргументи: void
+  # Повертаєме значення: void
 
   def cd(self):
     dest = getSingleActionParam(act["Cd"], self.action)
@@ -364,10 +364,10 @@ class App:
 
   # ----------------------------------------------------
 
-  # Name: ls
-  # Desc: Print list of data in current local/remote directory 
-  # Args: void
-  # Return: void
+  # Ім'я: ls
+  # Опис: Друк списку файлів в поточному шляху файлової системи
+  # Аргументи: void
+  # Повертаєме значення: void
 
   def ls(self):
     if self.env == envs["Remote"]:
@@ -393,10 +393,10 @@ class App:
 
   # ----------------------------------------------------
 
-  # Name: status
-  # Desc: Print status of connection
-  # Args: void
-  # Return: void
+  # Ім'я: status
+  # Опис: Друк статусу з'єднання
+  # Аргументи: void
+  # Повертаєме значення: void
 
   def status(self):
     try:
@@ -415,10 +415,10 @@ class App:
 
   # ----------------------------------------------------
 
-  # Name: clear
-  # Desc: Clear previous terminal inputs
-  # Args: void
-  # Return: void
+  # Ім'я: clear
+  # Опис: Очистка терміналу
+  # Аргументи: void
+  # Повертаєме значення: void
 
   def clear(self):
     clearResult = execCmd("clear")
@@ -429,10 +429,10 @@ class App:
 
   # ----------------------------------------------------
 
-  # Name: whereAmI
-  # Desc: Print current local/remote file system path
-  # Args: void
-  # Return: void
+  # Ім'я: whereAmI
+  # Опис: Друк поточного шляху файлової системи
+  # Аргументи: void
+  # Повертаєме значення: void
 
   def whereAmI(self):
     if self.env == envs["Local"]:
@@ -444,10 +444,10 @@ class App:
 
   # ----------------------------------------------------
 
-  # Name: whoAmI
-  # Desc: Print current local/remote username
-  # Args: void
-  # Return: void
+  # Ім'я: whoAmI
+  # Опис: Друк поточного імені користувача
+  # Аргументи: void
+  # Повертаєме значення: void
 
   def whoAmI(self):
     if self.env == envs["Local"]:
@@ -459,10 +459,10 @@ class App:
 
   # ----------------------------------------------------
 
-  # Name: exit
-  # Desc: Terminate application
-  # Args: void
-  # Return: void
+  # Ім'я: exit
+  # Опис: Завершення роботи
+  # Аргументи: void
+  # Повертаєме значення: void
 
   def exit(self):
     self.pingServer(message=False)
@@ -471,20 +471,20 @@ class App:
 
   # ----------------------------------------------------
 
-  # Name: help
-  # Desc: Print help message
-  # Args: void
-  # Return: void
+  # Ім'я: help
+  # Опис: Друк довідки
+  # Аргументи: void
+  # Повертаєме значення: void
 
   def help(self):
     msg.help()
 
   # ----------------------------------------------------
 
-  # Name: run
-  # Desc: Start application. Listen for actions
-  # Args: void
-  # Return: void
+  # Ім'я: run
+  # Опис: Запуск програми
+  # Аргументи: void
+  # Повертаєме значення: void
 
   def run(self):
     self.clear()

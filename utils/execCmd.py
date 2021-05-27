@@ -1,9 +1,9 @@
 import subprocess
 
-# Name: execCmd
-# Desc: Execute Linux terminal command
-# Args: command (string)
-# Return: any
+# Ім'я: execCmd
+# Опис: Виконання Linux команд в терміналі
+# Аргументи: command (string)
+# Повертаєме значення: будь-яке
 
 def execCmd(command):
   try:

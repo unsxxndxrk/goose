@@ -4,18 +4,18 @@ from modules.Namespace import Namespace
 
 ns = Namespace().interact
 
-# Name: Interact
-# Desc: Provide opportunities for interactions with the application
-# Methods: 
-#   - confirm (confirm some statement)
-#   - multiInput (collect multiple user responses)
+# Ім'я: Interact
+# Опис: Надає можливість користувачеві взаємодіяти з програмою
+# Методи: 
+#   - confirm (підтвердження)
+#   - multiInput (багаторядкове введення даних)
 
 class Interact:
 
-  # Name: confirm
-  # Desc: Confirm some statement
-  # Args: question (string)
-  # Return: boolean
+  # Ім'я: confirm
+  # Опис: Підтвердження
+  # Аргументи: question (string)
+  # Повертаєме значення: boolean
 
   def confirm(self, question):
     q = question + "\n"
@@ -30,11 +30,11 @@ class Interact:
 
   # ----------------------------------------------------
 
-  # Name: multiInput
-  # Desc: Collect multiple user responses
-  # Args: fields (Array of strings)
-  # Return: Dictionary,
-  #         each key - key of fields array, each value - user response 
+  # Ім'я: multiInput
+  # Опис: Багаторядкове введення даних
+  # Аргументи: fields (масив рядків)
+  # Повертаєме значення: Словник,
+  #         кожен ключ - ключ значення масиву, кожне значення - відповідь користувача 
 
   def multiInput(self, fields):
     result = {}

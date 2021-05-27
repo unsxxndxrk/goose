@@ -1,38 +1,38 @@
 {
-  "note1": "You can provide relative or absolute path for commands that uses it.",
-  "note2": "You dont need to use double or single quotes to create/delete/upload/download file or directory with spaces in name.",
-  "note3": "Put and Take actions move files to where you are at the moment. Example: \"put my-dir\" will upload my-dir folder in place where you in the remote server now.\n",
+  "note1": "Ви можете вказати відносний або абсолютний шлях для команд, які його використовують.",
+  "note2": "Вам не потрібно використовувати подвійні або одинарні кавички для створення/видалення/завантаження/скачування файлу або каталогу з пробілами в назві.",
+  "note3": "Команди Put та Take переміщують файли туди, де ви перебуваєте в даний момент на сервері. Наприклад: \"put my-dir\" завантажить папку my-dir туди, де ви зараз на віддаленому сервері.\n",
   
   "connect_example": "example.ftp.com",
-  "connect": "Connect to remote ftp server.",
+  "connect": "Підключитися до віддаленого FTP-серверу.",
 
   "upload_example": "/local/path/to/data",
-  "upload": "Upload file or directory to remote ftp server.",
+  "upload": "Завантажити файл або директорію на віддалений FTP-сервер.",
 
   "download_example": "/remote/path/to/data",
-  "download": "Download file or directory from remote ftp server.",
+  "download": "Скачати файл або директорію на локальний сервер.",
 
-  "changeLocalEnv": "Switch to local environment.",
-  "changeRemoteEnv": "Switch to remote environment.",
+  "changeLocalEnv": "Переключитися на локальне оточення.",
+  "changeRemoteEnv": "Переключитися на віддалене оточення.",
 
-  "status": "Show connection status.",
+  "status": "Показати статус з'єднання.",
 
   "mkdir_example": "/path/to/new/dir",
-  "mkdir": "Create directory.",
+  "mkdir": "Створити директорію.",
 
   "delete_example": "/path/to/data",
-  "delete": "Delete file or directory.",
+  "delete": "Видалити файл або директорію.",
 
   "cd_example": "/path/to/dir",
-  "cd": "Change directory.",
+  "cd": "Змінити директорію.",
 
-  "ls": "Print list of content in current directory.",
+  "ls": "Друк списку файлів у поточній директорії.",
 
-  "whereami": "Print current path.",
-  "whoami": "Print your user name.",
-  "clear": "Clear terminal.",
-  "help": "Print all available commands.",
-  "exit": "Terminate program.",
+  "whereami": "Друк поточного шляху файлової системи.",
+  "whoami": "Друк поточного імені користувача.",
+  "clear": "Очистка терміналу.",
+  "help": "Довідка.",
+  "exit": "Завершення роботи програми.",
 
-  "or": "or"
+  "or": "або"
 }

@@ -1,15 +1,15 @@
 import json
 from constants.nsAccessors import nsAccessors
 
-# Name: Namespace
-# Desc: Provide interface for accessing application namespaces
-# Methods: 
-#   - __getNamespace (get specific namespace)
-# Fields:
-#   - common (common namespaces)
-#   - interact (Interact module namespaces)
-#   - errors (namespaces for error messages)
-#   - help (namespaces for help message)
+# Ім'я: Namespace
+# Опис: Надає інтерфейс для використання просторів імен
+# Методи: 
+#   - __getNamespace (отримати простір імен)
+# Поля:
+#   - common (загальний)
+#   - interact (простір імен для взаємодії з користувачем)
+#   - errors (простір імен для помилок)
+#   - help (простір імен для довідки)
 
 class Namespace:
   def __init__(self):
@@ -18,10 +18,10 @@ class Namespace:
     self.errors = self.__getNamespace(nsAccessors["Errors"])
     self.help = self.__getNamespace(nsAccessors["Help"])
 
-  # Name: __getNamespace
-  # Desc: Get specific namespace
-  # Args: accessor (string<Key of actions>)
-  # Return: Dictionary
+  # Ім'я: __getNamespace
+  # Опис: Отримати простір імен
+  # Аргументи: accessor (string<Key of actions>)
+  # Повертаєме значення: Словник
 
   def __getNamespace(self, accessor):
     data = []

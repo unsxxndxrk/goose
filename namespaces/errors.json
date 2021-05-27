@@ -1,11 +1,11 @@
 {
-  "unexpected_error": "It seems something went really wrong.\nPlease, describe the problem in detail on the project homepage: https://github.com/unsxxndxrk/goose.",
-  "no_connection": "Connection to ftp-server not established.",
-  "transfer_error": "An error occured during the transfer.",
-  "invalid_path": "Path not exist.",
-  "terminal_command_error": "Unable to execute \"{command}\" action from your terminal.",
-  "cd_error": "Cannot change directory to \"{dest}\".",
-  "delete_error": "Unable to delete \"{target}\".",
-  "mkdir_error": "Unable to create directory \"{dirName}\".",
-  "connecting_error": "Unable to connect to \"{host}\"."
+  "unexpected_error": "Щось пішло не так.\nОпишіть детально проблему на сайті програми: https://github.com/unsxxndxrk/goose.",
+  "no_connection": "З'єднання з FTP-сервером не встановлене.",
+  "transfer_error": "Під час передачі даних виникла помилка.",
+  "invalid_path": "Шлях не знайдено.",
+  "terminal_command_error": "Неможливо виконати \"{command}\" команду з вашого терміналу.",
+  "cd_error": "Неможливо змінити директорію на \"{dest}\".",
+  "delete_error": "Неможливо видалити \"{target}\".",
+  "mkdir_error": "Неможливо створити директорію \"{dirName}\".",
+  "connecting_error": "Неможливо становити з'єднання з \"{host}\"."
 }

@@ -1,25 +1,25 @@
 {
-  "welcome_message": "Goose v1.0.0. FTP cli tool.\n",
+  "welcome_message": "Goose v1.0.0. FTP-клієнт командного рядка.\n© 2021 Завірюха Ігор Олександрович",
   "input": "goose~>{env}: ",
   "prompt_env": {
     "local": "",
-    "remote": "(remote)"
+    "remote": "(ftp)"
   },
   "status": {
-    "connected": "\n⁕ Connected!",
-    "disconnected": "⁕ Disconnected.",
-    "connected_data": "\nHost: {host}\nUsername: {user}\nPassword: {passwd}\nPort: {port}\n"
+    "connected": "\n⁕ З'єднання встановлене!",
+    "disconnected": "⁕ Немає з'єднання.",
+    "connected_data": "\nХост: {host}\nІм'я користувача: {user}\nПароль: {passwd}\nПорт: {port}\n"
   },
   "login": {
-    "user": "Username",
-    "passwd": "Password",
-    "port": "Port"
+    "user": "Ім'я користувача",
+    "passwd": "Пароль",
+    "port": "Порт"
   },
-  "success": "Done.",
-  "uploading": "Uploading: {target}",
-  "downloading": "Downloading: {target}",
-  "deleting": "Deleting: {target}",
-  "connecting": "Connecting to \"{host}\"",
-  "connected": "Successfuly connected to \"{host}\".",
-  "command_not_found": "Unknown command. Type \"help\" or \"h\" to view all available actions."
+  "success": "Готово.",
+  "uploading": "Завантаження: {target}",
+  "downloading": "Скачування: {target}",
+  "deleting": "Видалення: {target}",
+  "connecting": "Встановлення з'єднання з \"{host}\"",
+  "connected": "З'єднання успішно встановлене з \"{host}\".",
+  "command_not_found": "Неіснуюча команда. Введіть \"help\" або \"h\" для перегляду довідки."
 }

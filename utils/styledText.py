@@ -1,7 +1,7 @@
-# Name: styledText
-# Desc: Handle text with stylings
-# Args: text (string)
-# Return: string
+# Ім'я: styledText
+# Опис: Коректне форматування стилізованого тексту
+# Аргументи: text (string)
+# Повертаєме значення: string
 
 def styledText(text):
   endC = "\033[0m"

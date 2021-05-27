@@ -6,6 +6,6 @@
     "short_no": "n",
     "tip": "(Yes/No): "
   },
-  "data_exists": "\"{target}\" is already exists. Do you want to overwrite?\nIf YES, data will be merged. If NO, new file/directory will be created.",
-  "confirm_delete": "Delete \"{fileName}\"?"
+  "data_exists": "\"{target}\" уже існує. Бажаєте перезаписати?\nЯкщо ТАК, то дані будуть злиті воєдино. Якщо НІ, то буде створена копія даних.",
+  "confirm_delete": "Видалити \"{fileName}\"?"
 }

@@ -5,32 +5,32 @@ from utils.getHelp import getHelp
 
 ns = Namespace()
 
-# Name: Message
-# Desc: Provide interface for using application messages with custom styling
-# Methods: 
-#   - default (print default message)
-#   - welcome (print welcome app message)
-#   - error (print error message)
-#   - info (print info message)
-#   - success (print success message)
-#   - help (print help message)
+# Ім'я: Message
+# Опис: Надає можливість використовувати стилізовані повідомлення
+# Методи: 
+#   - default (звичайне повідомлення)
+#   - welcome (повідомлення привітання)
+#   - error (помилка)
+#   - info (інформативне повідомлення)
+#   - success (повідомлення про успіх)
+#   - help (довідка)
 
 class Message:
 
-  # Name: default
-  # Desc: Print default message
-  # Args: text (string)
-  # Return: void
+  # Ім'я: default
+  # Опис: Звичайне повідомлення
+  # Аргументи: text (string)
+  # Повертаєме значення: void
 
   def default(self, text):
     print(text)
 
   # ----------------------------------------------------
 
-  # Name: welcome
-  # Desc: Print welcome app message
-  # Args: void
-  # Return: void
+  # Ім'я: welcome
+  # Опис: Повідомлення привітання
+  # Аргументи: void
+  # Повертаєме значення: void
 
   def welcome(self):
     welcomeMessage = ns.common["welcome_message"]
@@ -39,40 +39,40 @@ class Message:
 
   # ----------------------------------------------------
 
-  # Name: error
-  # Desc: Print error message
-  # Args: text (string)
-  # Return: void
+  # Ім'я: error
+  # Опис: Помилка
+  # Аргументи: text (string)
+  # Повертаєме значення: void
 
   def error(self, text):
     print(styledText(textStyles["Red"] + text))
 
   # ----------------------------------------------------
 
-  # Name: info
-  # Desc: Print info message
-  # Args: text (string)
-  # Return: void
+  # Ім'я: info
+  # Опис: Інформативне повідомлення
+  # Аргументи: text (string)
+  # Повертаєме значення: void
 
   def info(self, text):
     print(styledText(textStyles["Yellow"] + text))
 
   # ----------------------------------------------------
 
-  # Name: success
-  # Desc: Print success message
-  # Args: text (string)
-  # Return: void
+  # Ім'я: success
+  # Опис: Повідомлення про успіх
+  # Аргументи: text (string)
+  # Повертаєме значення: void
 
   def success(self, text):
     print(styledText(textStyles["Green"] + text))
 
   # ----------------------------------------------------
 
-  # Name: help
-  # Desc: Print help message
-  # Args: void
-  # Return: void
+  # Ім'я: help
+  # Опис: Довідка
+  # Аргументи: void
+  # Повертаєме значення: void
 
   def help(self):
     print(getHelp())

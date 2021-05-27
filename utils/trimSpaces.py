@@ -1,7 +1,7 @@
-# Name: trimSpaces
-# Desc: Remove multiple spaces from string
-# Args: str (string)
-# Return: String with single spaces
+# Ім'я: trimSpaces
+# Опис: Позбавитися від багатьох пробілів у рядку
+# Аргументи: str (string)
+# Повертаєме значення: рядок з одиничним набором пробілів
 
 def trimSpaces(str):
   return " ".join(str.split())

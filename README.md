@@ -1,39 +1,39 @@
 # Goose v1.0.0
-#### _CLI Ftp-client. Transfer files with your ftp-server via simple command prompt interface._
+#### _CLI Ftp-client. Обмін файлами з FTP-сервером за допомогою простого інтерфейсу командного рядка._
 &nbsp;
 
-> Note: You dont need to use double or single quotes to create/delete/upload/download file or directory with spaces in name. For example, you should use: `dir new dir` instead `dir "new dir"`.
+> Примітка: Вам не потрібно використовувати подвійні або одинарні кавички для створення/видалення/завантаження/скачування файлу або каталогу з пробілами в назві. Використовуйте: `dir new dir` замість `dir "new dir"`.
 
 &nbsp;
-## Commands:
+## Команди:
 &nbsp;
 ### ✔ rush
-Connect to remote ftp server.
+Підключитися до віддаленого FTP-серверу.
 ```sh
 rush example.ftp.com
 ```
 &nbsp;
 
 ### ✔ put
-Upload file or directory to remote ftp server.
-You can provide relative path as well.
-Note, that "put" action uploads data to where you are at the moment in the remote server.
+Завантажити файл або директорію на віддалений FTP-сервер.
+Можна вказати відносний шлях також.
+Майте на увазі, що команда "put" переміщуює файли туди, де ви перебуваєте в даний момент на сервері.
 ```sh
 put /local/path/to/data
 ```
 &nbsp;
 
 ### ✔ take
-Download file or directory from remote ftp server.
-You can provide relative path as well.
-Note, that "take" action downloads data to where you are at the moment in the local server.
+Скачати файл або директорію на локальний сервер.
+Можна вказати відносний шлях також.
+Майте на увазі, що команда "take" переміщуює файли туди, де ви перебуваєте в даний момент на локальному сервері.
 ```sh
 take /remote/path/to/data
 ```
 &nbsp;
 
 ### ✔ jump
-Change current environment.
+Змінити поточне оточення.
 ```sh
 jump local
 ```
@@ -43,23 +43,23 @@ jump remote
 &nbsp;
 
 ### ✔ status
-Show connection status.
+Показати статус з'єднання.
 ```sh
 status
 ```
 &nbsp;
 
 ### ✔ dir
-Create directory.
-You can provide relative path as well.
+Створити директорію..
+Можна вказати відносний шлях також.
 ```sh
 dir /path/to/new/dir
 ```
 &nbsp;
 
 ### ✔ del
-Delete file or directory.
-You can provide relative path as well.
+Видалити файл або директорію.
+Можна вказати відносний шлях також.
 ```sh
 del /path/to/data
 ```
@@ -67,21 +67,21 @@ del /path/to/data
 
 ### ✔ cd
 Change directory.
-You can provide relative path as well.
+Можна вказати відносний шлях також.
 ```sh
 cd /path/to/dir
 ```
 &nbsp;
 
 ### ✔ ls
-Print list of content in current directory.
+Друк списку файлів у поточній директорії.
 ```sh
 ls
 ```
 &nbsp;
 
 ### ✔ whereami (pwd)
-Print current path.
+Друк поточного шляху файлової системи.
 ```sh
 whereami
 ```
@@ -91,21 +91,21 @@ pwd
 &nbsp;
 
 ### ✔ whoami
-Print your user name.
+Друк поточного імені користувача.
 ```sh
 whoami
 ```
 &nbsp;
 
 ### ✔ clear
-Clear terminal.
+Очистка терміналу.
 ```sh
 clear
 ```
 &nbsp;
 
 ### ✔ help (h)
- Print all available commands.
+Довідка.
 ```sh
 help
 ```
@@ -115,7 +115,7 @@ h
 &nbsp;
 
 ### ✔ exit (x)
- Terminate program.
+Завершення роботи програми.
 ```sh
 exit
 ```

@@ -5,10 +5,10 @@ from modules.Namespace import Namespace
 
 ns = Namespace()
 
-# Name: getInputPrompt
-# Desc: Get styled application input prompt
-# Args: env (string<Key of environmets>)
-# Return: string
+# Ім'я: getInputPrompt
+# Опис: Отримати стилізований рядок для введення команд
+# Аргументи: env (string<Key of environmets>)
+# Повертаєме значення: string
 
 def getInputPrompt(env):
   isRemote = env == envs["Remote"]

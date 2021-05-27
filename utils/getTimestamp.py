@@ -1,10 +1,10 @@
 import time
 import calendar
 
-# Name: getTimestamp
-# Desc: Get current timestamp
-# Args: void
-# Return: number
+# Ім'я: getTimestamp
+# Опис: Отрмати поточну мітку часу
+# Аргументи: void
+# Повертаєме значення: number
 
 def getTimestamp():
   return calendar.timegm(time.gmtime())

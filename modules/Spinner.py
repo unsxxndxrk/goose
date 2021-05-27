@@ -1,51 +1,51 @@
 from halo import Halo
 
-# Name: Spinner
-# Desc: Provide interface for using terminal spinner
-# Methods: 
-#   - start (start spinner)
-#   - success (stop with success icon)
-#   - fail (stop with fail icon)
-#   - stop (stop spinning)
+# Ім'я: Spinner
+# Опис: Надає інтерфейс для використання графічного спінеру
+# Методи: 
+#   - start (запуск спінеру)
+#   - success (зупинка з успішним повідомленням)
+#   - fail (зупинка з повідомленням про помилку)
+#   - stop (зупинка спінеру)
 
 class Spinner:
   def __init__(self):
     self.spinner = Halo(spinner="dots")
 
-  # Name: start
-  # Desc: Start spinner
-  # Args: text (string)
-  # Return: void
+  # Ім'я: start
+  # Опис: Запуск спінеру
+  # Аргументи: text (string)
+  # Повертаєме значення: void
 
   def start(self, text):
     self.spinner.start(text)
 
   # ----------------------------------------------------
 
-  # Name: success
-  # Desc: Stop with success icon
-  # Args: text (string)
-  # Return: void
+  # Ім'я: success
+  # Опис: Зупинка з успішним повідомленням
+  # Аргументи: text (string)
+  # Повертаєме значення: void
 
   def success(self, text):
     self.spinner.succeed(text)
 
   # ----------------------------------------------------
 
-  # Name: fail
-  # Desc: Stop with fail icon
-  # Args: text (string)
-  # Return: void
+  # Ім'я: fail
+  # Опис: Зупинка з повідомленням про помилку
+  # Аргументи: text (string)
+  # Повертаєме значення: void
 
   def fail(self, text):
     self.spinner.fail(text)
 
   # ----------------------------------------------------
 
-  # Name: stop
-  # Desc: Stop spinner
-  # Args: void
-  # Return: void
+  # Ім'я: stop
+  # Опис: Зупинка спінеру
+  # Аргументи: void
+  # Повертаєме значення: void
 
   def stop(self):
     self.spinner.stop()
